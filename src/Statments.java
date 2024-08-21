@@ -27,7 +27,5 @@ public class Statments {
             default:
                 System.out.println("Doesn't right");
         }
-        String s = a > 10 ? "Bigger" : "Shorter";
-        System.out.println(s);
     }
 }
