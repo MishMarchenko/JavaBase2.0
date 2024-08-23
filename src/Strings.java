@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Strings {
     public static void main(String[] args) {
@@ -49,16 +51,15 @@ public class Strings {
         String [] strArray = st1.split(" ");
         System.out.println(Arrays.toString(strArray));
 
+//        REGEX
 
+        System.out.println(mailCheck("mishmarch@gmail.com"));
 
-
-
-
-
-
-
-
-
+    }
+    public static boolean mailCheck (String target){
+        Pattern pattern = Pattern.compile(".+\\@(gmail|ukr).(com|ua|net)");
+        Matcher matcher = pattern.matcher(target);
+        return matcher.matches();
     }
     public static String f(String target, String aim){
         return String.format(target + "%s", aim);
